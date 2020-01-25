@@ -1,0 +1,49 @@
+\section{不定形の極限値}
+
+\textbf{1.　ロピタルの定理}
+
+\定理{15.1}
+$f(x)$，$g(x)$が$a$を含む区間で連続，高々$a$を除いて微分可能で，
+$g'(x)	\ne	0$であって，
+\[
+	f(a)	=	g(a)	=	0
+\]
+ならば，有限な極限値：$\displaystyle	\lim_{x	\rightarrow	a}	\frac{f'(x)}{g'(x)}$
+が存在する限り，
+\begin{equation}
+	\lim_{x	\rightarrow	a	}\frac{f(x)}{g(x)}	=	\lim_{x\rightarrow	a}
+	\frac{f'(x)}{g'(x)}	\quad\quad	\text{\textbf{(ロピタルの定理)}}
+	\label{eq15.1}
+\end{equation}
+\証明
+
+定理の仮定とコーシーの平均値の定理によって，
+\[
+	\frac{f(x)}{g(x)}	=	\frac{f(x)-f(a)}{g(x)-g(a)}
+										=	\frac{f'(\xi)}{g'(\xi)}
+	\quad	(a	<	\xi	<	x)
+\]
+をみたす$\xi$が存在する．ここで，$x	\rightarrow	a	+	0$とすれば，
+$\xi	\rightarrow	a	+	0$であって，
+\begin{equation}
+		\lim_{x	\rightarrow	0+a}\frac{f(x)}{g(x)}
+	=	\lim_{x	\rightarrow	0+a}\frac{f'(\xi)}{g'(\xi)}
+	=	\lim_{\xi	\rightarrow	0+a}\frac{f'(\xi)}{g'(\xi)}
+	=	\lim_{x	\rightarrow	0+a}\frac{f'(x)}{g'(x)}
+	\quad
+	(a	<	\xi	<	x)
+	\label{eq15.2}
+\end{equation}
+同様に$[x,a]$でコーシーの平均値の定理を利用すれば，
+\begin{equation}
+	\lim_{x	\rightarrow	a-0}	\frac{f(x)}{g(x)}
+	=
+	\lim_{x	\rightarrow	a-0}	\frac{f'(x)}{g'(x)}.
+	\label{eq15.3}
+\end{equation}
+(\ref{eq15.2})式と(\ref{eq15.3})式によって，
+(\ref{eq15.1})式が得られる．
+
+(証明終)
+
+(中略) 

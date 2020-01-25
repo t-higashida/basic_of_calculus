@@ -1,0 +1,335 @@
+\section{関数の増減と極値}
+
+\textbf{1.　極値をとるための必要条件.}
+
+（中略）
+
+\textbf{2.　極値をとるための十分条件.}
+
+\定理{20.3}
+$f(x)$に対して，$c$を含む開区間で$f^{(n)}(x)$が連続で，
+\begin{equation}
+	f^{(k)}(c)	=	0	\quad\quad	(k=1,\cdots	,	n-1)
+\end{equation}
+とする．
+\begin{list}{}{}
+	\item（ⅰ）$n$が偶数の場合：
+			\begin{list}{}{}
+				\item	$f^{(n)}(c)	>0$ならば，$f(x)$は$c$で極小値をとり，
+				\item	$f^{(n)}(c)	<0$ならば，$f(x)$は$c$で極大値をとる；
+							\textbf{(極値をとるための十分条件)}
+			\end{list}
+	\item（ⅱ）$n$が奇数の場合：
+			\begin{list}{}{}
+				\item	$f^{(n)}(c)	\ne	0$ならば，$f(x)$は$c$で極値をとらない．
+			\end{list}
+\end{list}
+
+\証明
+テイラーの定理(\ref{eq16.9})式によって，（中略）
+
+(証明終)
+
+定理20.3において，$n=2$の場合を考えれば，つぎの定理がえられる：
+
+\定理{20.4}
+$f(x)$に対して，$c$を含む開区間で$f''(x)$が連続で，
+\[
+	f'(c)	=	0
+\]
+であるとき，
+\begin{list}{}{}
+	\item	$f''(c)>0$ならば，$f(x)$は$c$で極小値をとり，
+	\item	$f''(c)<0$ならば，$f(x)$は$c$で極大値をとる．\textbf{(極値であるための十分条件)}
+\end{list}
+
+\pagebreak
+\textbf{3.　曲線の凹凸}
+
+$(a,b)$で$f'(x)$が増加の状態にあるとき，$f(x)$は$(a,b)$で\textbf{下に凸}であるという
+(図\ref{fig20.2})．
+また，$(a,b)$で$f'(x)$が減少の状態にあるとき，$f(x)$は$(a,b)$で\textbf{上に凸}であるという
+(図\ref{fig20.3})．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 400 300,clip,width=4cm,height=3cm]{fig20x2.bmp}
+	\caption{下に凸}
+	\label{fig20.2}
+	\centering
+	\includegraphics[bb=0 0 400 300,clip,width=4cm,height=3cm]{fig20x3.bmp}
+	\caption{上に凸}
+	\label{fig20.3}
+\end{figure}
+
+関数が，
+\begin{list}{}{}
+	\item	下に凸である状態から，上に凸である状態にかわる点(図\ref{fig20.4})，
+	\item	上に凸である状態から，下に凸である状態にかわる点(図\ref{fig20.5})，
+\end{list}{}{}
+を，ともに，\textbf{変曲点}という．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 200 150,clip,width=4cm,height=3cm]{fig20x4.bmp}
+	\caption{変曲点}
+	\label{fig20.4}
+	\centering
+	\includegraphics[bb=0 0 400 300,clip,width=4cm,height=3cm]{fig20x5.bmp}
+	\caption{変曲点}
+	\label{fig20.5}
+\end{figure}
+
+\定理{20.5}
+\begin{list}{}{}
+	\item	$(a,b)$で$f''(x)>0$ならば，$f(x)$は$(a,b)$で下に凸であり，
+	\item	$(a,b)$で$f''(x)<0$ならば，$f(x)$は$(a,b)$で上に凸である．
+\end{list}{}{}
+\証明
+定理20.1によって，$(a,b)$で$f''(x)>0$ならば，$(a,b)$で$f'(x)$が増加の状態にある．
+したがって，$f(x)$は$(a,b)$で下に凸である．
+
+$(a,b)$で$f''(x)<0$の場合も同様である．
+
+(証明終)
+
+\pagebreak
+\textbf{4.　曲線の概形}
+
+\例{1}
+$\displaystyle	0	<	x	<	\frac{\pi}{2}$のとき，
+
+（中略）
+
+\例{3}	$f(x)=x^2e^{-x}$
+の増減，凹凸，極値，などをしらべて，グラフの概形を描こう．
+\begin{align*}
+	f'(x)		&	=2xe^{-x}	-x^2e^{-x}=(2x-x^2)e^{-x}=x(2-x)e^{-x}.	\\
+	f''(x)	&	=(2-2x)e^{-x}	-(2x-x^2)e^{-x}=(2-4x+x^2)e^{-x}
+\end{align*}
+したがって，$f(x)$の増減，凹凸は表\ref{tab20.3}のようになり，
+\[
+	x=0\text{で極小値}0,	\quad	x=2\text{で極大値}4e^{-2}
+\]
+をとる．
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|c}
+\hline
+$x$		&	$-\infty$ &	$\cdots$	&	$0$ &			$\cdots$	&	$2-\sqrt{2}$	&	$\cdots$	&	$2$				&	$\cdots$	&	$2+\sqrt{2}$	&	$\cdots$	&	$\infty$	\\ \hline\hline
+$f'$	& $-\infty$	&	$-$				&	$0$	&			$+$				&	$+$						&	$+$				&	$0$				&	$-$				&	$-$						&	$-$				&	$-0$			\\ \hline
+$f''$	&						&	$+$				&	$+$	&			$+$				&	$0$						&	$-$				&	$-$				&	$-$				&	$0$						&	$+$				&						\\ \hline\hline
+$f$		&						&						&	下に凸&							&	変曲点				&						&	上に凸		&						&	変曲点				&	下に凸		&						\\ \hline
+			&	$\infty$	&	$\searrow$&	$0$,極小&						&	$\nearrow$		&						&	$\small\displaystyle	\frac{4}{e^2}$，極大
+																																														&						&	$\searrow$		&						&	$+0$			\\ \hline
+\end{tabular}
+\caption{$f(x)=x^2e^{-x}$の増減表}
+\label{tab20.3}
+\end{table}  
+さらに，L'Hopitalの定理を２回繰り返し用いることによって，
+\begin{align*}
+	\lim_{x\rightarrow\infty}f(x)	&	=	\lim_{x\rightarrow\infty}	x^2	e^{-x}
+																	=	\lim_{x\rightarrow\infty}	\frac{x^2}{e^x}	\\
+																&	=	\lim_{x\rightarrow\infty}	\frac{2x}{e^x}
+																	=	\lim_{x\rightarrow\infty}	\frac{2}{e^x}	=	0.
+\end{align*}
+したがって，$x$-軸は，$x\rightarrow\infty$のときの曲線：$y=f(x)$の漸近線，また，
+\[
+	\lim_{x\rightarrow\infty}	x^2	e^{-x}	=	\infty.
+\]
+以上のことから，曲線：$y=f(x)$のグラフは，図\ref{fig20.7}のようになる．
+\begin{figure}[htbp]
+\begin{center}
+\setlength{\unitlength}{8mm}
+\begin{picture}(5,5)
+
+		\thicklines	\put(	-2.00,	0.00	){\vector(1,0){	10.50	}}
+		\thicklines	\put(	8.60,	0.00	){$x$}
+		\thicklines	\put(	0.00,	-1.00	){\vector(0,1){	6.00	}}
+		\thicklines	\put(	0.00,	5.30	){$y$}
+		\thicklines	\put(	-0.750,	-0.750	){$O$}
+
+		\thicklines
+		\path(-0.700000,	4.933694)(-0.600000,	3.279814)	
+		\path(-0.600000,	3.279814)(-0.500000,	2.060902)	
+		\path(-0.500000,	2.060902)(-0.400000,	1.193460)	
+		\path(-0.400000,	1.193460)(-0.300000,	0.607437)	
+		\path(-0.300000,	0.607437)(-0.200000,	0.244281)	
+		\path(-0.200000,	0.244281)(-0.100000,	0.055259)	
+		\path(-0.100000,	0.055259)(-0.000000,	0.000000)	
+		\path(-0.000000,	0.000000)(0.100000,	0.045242)	
+		\path(0.100000,	0.045242)(0.200000,	0.163746)	
+		\path(0.200000,	0.163746)(0.300000,	0.333368)	
+		\path(0.300000,	0.333368)(0.400000,	0.536256)	
+		\path(0.400000,	0.536256)(0.500000,	0.758163)	
+		\path(0.500000,	0.758163)(0.600000,	0.987861)	
+		\path(0.600000,	0.987861)(0.700000,	1.216634)	
+		\path(0.700000,	1.216634)(0.800000,	1.437853)	
+		\path(0.800000,	1.437853)(0.900000,	1.646607)	
+		\path(0.900000,	1.646607)(1.000000,	1.839397)	
+		\path(1.000000,	1.839397)(1.100000,	2.013870)	
+		\path(1.100000,	2.013870)(1.200000,	2.168598)	
+		\path(1.200000,	2.168598)(1.300000,	2.302894)	
+		\path(1.300000,	2.302894)(1.400000,	2.416650)	
+		\path(1.400000,	2.416650)(1.500000,	2.510214)	
+		\path(1.500000,	2.510214)(1.600000,	2.584275)	
+		\path(1.600000,	2.584275)(1.700000,	2.639777)	
+		\path(1.700000,	2.639777)(1.800000,	2.677842)	
+		\path(1.800000,	2.677842)(1.900000,	2.699714)	
+		\path(1.900000,	2.699714)(2.000000,	2.706706)	
+		\path(2.000000,	2.706706)(2.100000,	2.700164)	
+		\path(2.100000,	2.700164)(2.200000,	2.681436)	
+		\path(2.200000,	2.681436)(2.300000,	2.651846)	
+		\path(2.300000,	2.651846)(2.400000,	2.612677)	
+		\path(2.400000,	2.612677)(2.500000,	2.565156)	
+		\path(2.500000,	2.565156)(2.600000,	2.510447)	
+		\path(2.600000,	2.510447)(2.700000,	2.449641)	
+		\path(2.700000,	2.449641)(2.800000,	2.383754)	
+		\path(2.800000,	2.383754)(2.900000,	2.313726)	
+		\path(2.900000,	2.313726)(3.000000,	2.240418)	
+		\path(3.000000,	2.240418)(3.100000,	2.164614)	
+		\path(3.100000,	2.164614)(3.200000,	2.087025)	
+		\path(3.200000,	2.087025)(3.300000,	2.008289)	
+		\path(3.300000,	2.008289)(3.400000,	1.928975)	
+		\path(3.400000,	1.928975)(3.500000,	1.849590)	
+		\path(3.500000,	1.849590)(3.600000,	1.770577)	
+		\path(3.600000,	1.770577)(3.700000,	1.692325)	
+		\path(3.700000,	1.692325)(3.800000,	1.615170)	
+		\path(3.800000,	1.615170)(3.900000,	1.539397)	
+		\path(3.900000,	1.539397)(4.000000,	1.465251)	
+		\path(4.000000,	1.465251)(4.100000,	1.392933)	
+		\path(4.100000,	1.392933)(4.200000,	1.322610)	
+		\path(4.200000,	1.322610)(4.300000,	1.254413)	
+		\path(4.300000,	1.254413)(4.400000,	1.188446)	
+		\path(4.400000,	1.188446)(4.500000,	1.124786)	
+		\path(4.500000,	1.124786)(4.600000,	1.063484)	
+		\path(4.600000,	1.063484)(4.700000,	1.004573)	
+		\path(4.700000,	1.004573)(4.800000,	0.948067)	
+		\path(4.800000,	0.948067)(4.900000,	0.893962)	
+		\path(4.900000,	0.893962)(5.000000,	0.842243)	
+		\path(5.000000,	0.842243)(5.100000,	0.792882)	
+		\path(5.100000,	0.792882)(5.200000,	0.745840)	
+		\path(5.200000,	0.745840)(5.300000,	0.701069)	
+		\path(5.300000,	0.701069)(5.400000,	0.658517)	
+		\path(5.400000,	0.658517)(5.500000,	0.618124)	
+		\path(5.500000,	0.618124)(5.600000,	0.579825)	
+		\path(5.600000,	0.579825)(5.700000,	0.543552)	
+		\path(5.700000,	0.543552)(5.800000,	0.509235)	
+		\path(5.800000,	0.509235)(5.900000,	0.476800)	
+		\path(5.900000,	0.476800)(6.000000,	0.446175)	
+		\path(6.000000,	0.446175)(6.100000,	0.417286)	
+		\path(6.100000,	0.417286)(6.200000,	0.390057)	
+		\path(6.200000,	0.390057)(6.300000,	0.364415)	
+		\path(6.300000,	0.364415)(6.400000,	0.340287)	
+		\path(6.400000,	0.340287)(6.500000,	0.317602)	
+		\path(6.500000,	0.317602)(6.600000,	0.296288)	
+		\path(6.600000,	0.296288)(6.700000,	0.276278)	
+		\path(6.700000,	0.276278)(6.800000,	0.257505)	
+		\path(6.800000,	0.257505)(6.900000,	0.239903)	
+		\path(6.900000,	0.239903)(7.000000,	0.223411)	
+		\path(7.000000,	0.223411)(7.100000,	0.207968)	
+		\path(7.100000,	0.207968)(7.200000,	0.193515)	
+		\path(7.200000,	0.193515)(7.300000,	0.179997)	
+		\path(7.300000,	0.179997)(7.400000,	0.167361)	
+		\path(7.400000,	0.167361)(7.500000,	0.155555)	
+		\path(7.500000,	0.155555)(7.600000,	0.144530)	
+		\path(7.600000,	0.144530)(7.700000,	0.134241)	
+		\path(7.700000,	0.134241)(7.800000,	0.124641)	
+		\path(7.800000,	0.124641)(7.900000,	0.115691)	
+
+		\qbezier[10](0.5858,0)(0.5858,0.5)(0.5858,1)
+		\put(0.5858,1){\circle{0.1}}
+		\put(0.2,-0.7){\footnotesize	$2-\sqrt{2}$}
+
+		\qbezier[20](2,0)(2,1.3)(2,2.6)
+		\put(2.2,0.2){\footnotesize	$2$}
+		\put(2,2.7){\circle{0.1}}
+
+		\qbezier[20](3.4142136,0)(3.4142136,0.95)(3.4142136,1.9)
+		\put(3.4142136,-0.7){\footnotesize$2+\sqrt{2}$}
+		\put(3.4142136,1.95){\circle{0.1}}
+		\put(3.4142136,1.9){\footnotesize	変曲点}
+
+		\qbezier[20](0,	2.706706)(1,2.700164)(2,2.700164)	
+		\put(0,	3){$\frac{4}{e^4}$}
+
+\end{picture}
+\end{center}
+\caption{$f(x)=x^2e^{-x}$}
+\label{fig20.7}
+\end{figure}
+
+\pagebreak
+\textbf{5．極座標と極方程式}
+
+直交座標系$O-xy$に関する点$P$の直交座標$(x,y)$と
+\textbf{極座標}$(r,\theta)$との関係は，
+\begin{equation}
+	x	=	r	\cos	\theta,	\quad	y=r	\sin	\theta
+											\quad	(r	>	0;	\text{図\ref{fig20.8}})
+\end{equation}
+これから逆に，
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 600,clip,width=7.5cm,height=5cm]{fig20x8.bmp}
+	\caption{極座標}
+	\label{fig20.8}
+\end{figure}
+\begin{equation}
+	x	=	r	=	\sqrt{x^2+y^2},	\tan	\theta	=	\frac{y}{x}.
+\end{equation}
+極座標で表された曲線の方程式を\textbf{極方程式}という．
+
+\例{4}
+Cardioid（ハート型）：$r=\alpha	(1+	\cos	\theta)	\quad	(\alpha	>	0).$
+
+$r	=	a\{	1+	\cos	(-\theta)\}=a(1+	\cos	\theta)$であるから，
+グラフは$x-$軸に関して対称である．また，
+$r=a(1	+	\cos	\theta	)	\leqq	2a$であるから，曲線は中心$(0,0)$，半径$2a$の円内にある．
+\[
+	\frac{dr}{d\theta}	=	-	a	\sin	\theta	\leqq	0	\quad	(0	\leqq	\theta	\leqq	\pi)
+\]
+$\theta	=	0,\pi$で$\displaystyle	\frac{dr}{d\theta}=0$．
+
+$y$座標に関しては，
+\begin{align*}
+	y							&=	r	\sin	\theta	=	a	(1	+	\cos	\theta	)	\sin	\theta	\\
+	\frac{dy}{dr}	&=	a	(	2	\cos	\theta	-1)(\cos	\theta	+1)
+\end{align*}
+$\displaystyle	\frac{dy}{dr}$を解いて
+$\cos	\theta	=	-1$，このとき$\displaystyle	\theta	=	\frac{3\pi}{2}$（不適）．
+$\displaystyle	\cos	\theta	=	-\frac{1}{2}$，このとき$\displaystyle	\theta	=	\frac{\pi}{3}$，
+$\displaystyle	y=\frac{3\sqrt{3}a}{4}$．
+
+$x$座標に関しては，
+\begin{align*}
+	x							&=	r	\cos	\theta	=	a	(1	+	\cos	\theta	)	\cos	\theta	\\
+	\frac{dx}{dr}	&=	-a	\sin	\theta	(	2	\cos	\theta	+1)
+\end{align*}
+$\displaystyle	\frac{dx}{dr}$を解いて
+$\sin	\theta	=	0$，このとき$\displaystyle	\theta	=	0,\pi$．
+$\displaystyle	\cos	\theta	=	-\frac{1}{2}$，このとき$\displaystyle	\theta	=	\frac{2\pi}{3}$，
+$\displaystyle	r=\frac{1}{2}a$，$\displaystyle	x=-\frac{1}{4}a$
+
+
+したがって，$r$は$0	\leqq	\theta	\leqq	\pi$で減少の状態であり(表\ref{tab20.4})，
+グラフの概形は，図\ref{fig20.9}のようになる．
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|c}
+\hline
+$\theta$						&	$0$ 	&	$\cdots$		&	$\frac{\pi}{4}$ &	$\cdots$		&	$\frac{\pi}{2}$	&	$\cdots$		&	$\frac{3\pi}{4}$	&	$\cdots$		&	$\pi$	\\ \hline\hline
+$\frac{dr}{d\theta}$& $0$		&	$-$					&	$-$							&	$-$					&	$-$							&	$-$					&	$-$								&	$-$					&	$0$		\\ \hline
+$r$									&	$2a$	&	$\searrow$	&	$\left(1+\frac{1}{\sqrt{2}}\right)a$	
+																														&	$\searrow$	&	$a$							&	$\searrow$	&	$\left(1-\frac{1}{\sqrt{3}}\right)a$
+																																																															&	$\searrow$	&	$0$		\\	\hline
+\end{tabular}
+\label{tab20.4}
+\end{table}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[bb=0 0 800 600,clip,width=9cm,height=6cm]{fig20x9.bmp}
+	\caption{Cardioid}
+	\label{fig20.9}
+\end{figure}
+\begin{equation}
+	x	=	r	=	\sqrt{x^2+y^2},	\tan	\theta	=	\frac{y}{x}.
+\end{equation}

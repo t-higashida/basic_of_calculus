@@ -1,0 +1,59 @@
+\section{対数微分法}
+
+\textbf{1．対数微分法}
+\begin{equation}
+	y=f(x)^{g(x)}	\quad	(f(x)	>	0)
+	\label{eq8.1}
+\end{equation}
+の導関数を，\textbf{対数微分法}によって求める方法を示そう.
+(\ref{eq8.1})式の両辺の対数をとれば，
+\[
+	\log	y	=	\log	f(x)^{g(x)}	=	g(x)	\log	f(x).
+\]
+対数微分の公式を利用して，この両辺を$x$に関しては微分すれば，
+\begin{align*}
+	\frac{y'}{y}	&=	g'(x)	\log	f(x)	+	g(x)	\cdot	\frac{f'(x)}{f(x)}.	\\
+	\therefore	y'&=	f(x)^{g(x)}	\left\{
+									g'(x)	\log	f(x)+	g(x)	\cdot	\frac{f'(x)}{f(x)}	\right\}	\\
+								&=	f(x)^{g(x)-1}	\{f(x)g'(x)	\log	f(x)	+	f'(x)	g(x)	\}.
+\end{align*}
+
+\textbf{2．応用例}
+
+\例{1.}	$y=a^x	\quad	(a	>	0)$.
+両辺の対数をとって，
+\[
+	\log	y	=	\log	a^x	=	x	\log	a.
+\]
+両辺を$x$に関して微分して，
+\begin{align*}
+	\frac{y'}{y}	=	\log	a.	\\
+	\therefore	y'	=	y	\log	a	=	a^x	\log	a.
+\end{align*}
+\begin{equation}
+	\therefore	(a^x)'	=	a^x	\log	a.	\label{eq8.2}
+\end{equation}
+
+\例{2}
+
+（保留）
+
+\例{3}
+$y=x^\alpha	\quad	(x	>	0;	\alpha	\text{は定数})$.
+
+両辺の対数をとって，
+\[
+	\log	y	=	\log	x^\alpha	=	\alpha	\log	x.
+\]
+両辺を$x$に関して微分して，
+\begin{align*}
+	\frac{y'}{y}		&=	\frac{\alpha}{x}.	\\
+	\therefore	y'	&=	x^\alpha	\cdot	\frac{\alpha}{x}	=	\alpha	x^{\alpha	-1}.
+\end{align*}
+\begin{equation}
+	\therefore	(x^\alpha)'	=	\alpha	x^{\alpha-1}	\quad	(x>0	;	\alpha\text{は定数}).
+	\label{eq8.4}
+\end{equation}
+(例3終)
+
+(保留)

@@ -1,0 +1,150 @@
+\chapter{偏微分法}
+
+\section{極限値と連続関数}
+
+\textbf{1.　多変数関数}
+
+3変数以上の関数：$z=f(x_1,\cdots,	x_n)	\:	(n	\leqq	3)$の場合も，
+ほぼ，同様であるので，2変数の関数$z=f(x,y)$の場合について述べよう．
+1変数の関数:$y=f(x)$の場合，定義域は一般に区間であって，その区間で，
+$f(x)$の連続性，微分可能性などの性質を調べてきた．
+2変数の関数：
+\[
+	z	=	f(x,y)
+\]
+の場合，定義域としては，一般に，領域が採用される．これから考える領域は，
+図\ref{fig21.1}のような，有限個の閉じた曲線で囲まれた図家，ないしは，
+図\ref{fig21.2}のように無限に広がった領域である．前者を，とくに，
+\textbf{有界領域}とよぶ．領域といえば，普通，その境界を含めないが，
+領域にその境界を加えたものを\textbf{閉領域}という．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 600,clip,width=6cm,height=4cm]{fig21x1.bmp}
+	\caption{閉領域}
+	\label{fig21.1}
+	\centering
+	\includegraphics[bb=0 0 800 600,clip,width=6cm,height=4cm]{fig21x2.bmp}
+	\caption{無限に広がった領域$y	\geqq	1/x$など}
+	\label{fig21.2}
+\end{figure}
+
+領域$D$で定義された関数：$z=f(x,y)$は，幾何学的には，空間での曲面を定義するとして
+解釈してよいであろう(図\ref{fig21.3}).$f(x,y)$の連続性，微分可能性などを利用して，
+この曲面の滑らかさや凹凸，極大点，極小点を調べることができる．
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[bb=0 0 800 600,clip,width=9cm,height=7cm]{fig21x3.bmp}
+	\caption{空間での曲面}
+	\label{fig21.3}
+\end{figure}
+
+\textbf{2．　極限値}
+
+平面上の点$P=(x,y)$が，点$A=(a,b)$以外の点をかわりながら
+$(a,b)$に限りなく近づく，すなわち，
+\begin{align*}
+	&\forall	\varepsilon	>	0	\text{に対して，}	\exists	\delta	>	0	\text{が存在して}
+	0	<	|PA|	<	\delta	\Longrightarrow	|f(P)-\alpha|	<	\varepsilon,	\\
+	&\text{ただし}|PA|=\sqrt{(x-a)^2+(y-b)^2}
+\end{align*}
+のとき，関数$f(x,y)$の値が一定の値$\alpha$に限りなく
+近づくならば，
+\[
+	\text{$(x,y)$が$(a,b)$に近づくときの$f(x,y)$の\textbf{極限値}は$\alpha$である}
+\]
+といい，
+\begin{align*}
+	&\lim_{(x,y)\rightarrow	(a,b)}	f(x,y)	=	\alpha,	\\
+	&\lim_{x\rightarrow	a,y\rightarrow	b)}	f(x,y)	=	\alpha,	\\
+	&f(x,y)	\rightarrow	\alpha	\quad\quad	((x,y)\rightarrow	(a,b)),	\\
+\end{align*}
+などで表す．
+
+\例{}
+$\displaystyle	f(x,y)=\frac{x^3-y^3}{x^2+y^2}$.
+\begin{align*}
+	0	&\leqq	|f(x,y)|	=			\left|	\frac{x^3-y^3}{x^2+y^2}	\right|
+											\leqq	\frac{|x^3|}{|x^2+y^2|}	+	\frac{|y^3|}{|x^2+y^2|}	\\
+		&=		|x|	\cdot	\left|	\frac{x^2}{x^2+y^2}	\right|
+				+	|y|	\cdot	\left|	\frac{y^2}{x^2+y^2}	\right|	\\
+		&\leqq	|x|+|y|	\rightarrow	0	\quad	((x,y)\rightarrow	(0,0)).	\\
+	\therefore	\lim_{(x,y)\rightarrow	(0,0)}\frac{x^3-y^3}{x^2+y^2}	=	0.
+\end{align*}
+(例終)
+
+\textbf{3.　基本定理}
+
+関数の極限値に関しては，つぎの定理が基本的である：
+
+\定理{21.1}\textbf{(2変数関数の極限値の基本定理)}	
+\[
+	\lim_{(x,y)\rightarrow	(a,b)}	f(x,y)	=	\alpha,	\quad
+	\lim_{(x,y)\rightarrow	(a,b)}	g(x,y)	=	\beta
+\]
+であるとき，
+\begin{list}{}{}
+	\item	(ⅰ)	$\displaystyle	\lim_{(x,y)\rightarrow	(a,b)}	c	f(x,y)	=	c\alpha$　　($c$は定数);	
+	\item	(ⅱ)	$\displaystyle	\lim_{(x,y)\rightarrow	(a,b)}	\{f(x,y)	\pm	g(x,y)\}	=		\alpha	\pm	\beta$；
+	\item	(ⅲ)	$\displaystyle	\lim_{(x,y)\rightarrow	(a,b)}	\{f(x,y)g(x,y)\}	=		\alpha\beta$；	
+	\item	(ⅳ)	$\displaystyle	\lim_{(x,y)\rightarrow	(a,b)}	\frac{f(x,y)}{g(x,y)}	=		\frac{\alpha}{\beta}$；
+	ここで$\beta	\ne	0$．
+\end{list}
+
+\textbf{4.　連続関数}
+
+関数$f(x,y)$が，つぎの3つの条件を満たすとき，$f(x,y)$は\textbf{点$(a,b)$で連続であるという}：
+\begin{list}{}{}
+	\item	(ⅰ)	$(a,b)$は$f(x,y)$の定義域に属している；
+	\item	(ⅱ)　$\displaystyle	\lim_{(x,y)\rightarrow	(a,b)}	f(x,y)$が存在する；
+	\item	(ⅲ)　$\displaystyle	\lim_{(x,y)\rightarrow	(a,b)}	f(x,y)$と$f(a,b)$が等しい；
+							$\displaystyle	\lim_{(x,y)\rightarrow	(a,b)}	f(x,y)=f(a,b)$.
+\end{list}
+関数$f(x,y)$が，領域$D$のすべての点で連続であるとき，$f(x,y)$は\textbf{領域$D$で連続である}
+という．
+
+定理21.1から，つぎの定理が得られる：
+
+\定理{21.2}	\textbf{(2変数連続関数の基本定理)}
+
+$f(x,y)$，$g(x,y)$が$(a,b)$で連続ならば，
+\begin{list}{}{}
+	\item	(ⅰ)	$c	f(x,y)$　　($c$は定数);	
+	\item	(ⅱ)	$f(x,y)	\pm	g(x,y)$，
+	\item	(ⅲ)	$f(x,y)+g(x,y)$；	
+	\item	(ⅳ)	$\displaystyle	\frac{f(x,y)}{g(x,y)}$		$g(a,b)	\ne	\ne	0$
+\end{list}
+は，それぞれ，$(a,b)$で連続である．
+
+\証明
+
+定理21.1で，$\alpha	=	f(a,b)$，$\beta	=	g(a,b)$とおけばよい．
+
+(証明終)
+
+\問{1}(1)～(4)$f(x,y)$について，(ⅰ)～(ⅲ)を調べよ．
+\begin{list}{}{}
+	\item	(ⅰ)	$\displaystyle	\lim_{y\rightarrow	0}	\left(	\lim_{x	\rightarrow	0}	f(x,y)\right)$，
+							$\displaystyle	\lim_{x\rightarrow	0}	\left(	\lim_{y	\rightarrow	0}	f(x,y)\right)$，
+							を求めよ．
+	\item	(ⅱ)　直線：$y=mx$に沿って，$(x,y)	\rightarrow	(0,0)$のときの$f(x,y)$の極限値を求めよ；
+	\item	(ⅲ)　$\displaystyle	\lim_{(x,y)\rightarrow	(0,0)}f(x,y)$は存在しないことを確かめよ；
+\end{list}
+(1)	$\displaystyle	f(x,y)=	\frac{x-y}{x+y}$,
+
+\解	（保留）
+
+(2)	$\displaystyle	f(x,y)=	\frac{x}{x-y}$,
+
+\解	（保留）
+
+(3)	$\displaystyle	f(x,y)=	\frac{xy}{x^2+y^2}$,
+
+（ⅰ）（保留）
+
+（ⅱ）$y=mx$であるから，
+$\displaystyle	\lim_{x\rightarrow	0}	\frac{mx^2}{x^2+m^2x^2}=\lim_{x\rightarrow	0}	\frac{m}{1+m^2}=\frac{m}{1+m^2}$
+
+(4)	$\displaystyle	f(x,y)=	\frac{x^3-y^3}{x^2+y^2}$,
+
+\解	（保留）
+

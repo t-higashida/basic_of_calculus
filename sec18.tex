@@ -1,0 +1,112 @@
+\section{Taylor展開}
+
+\textbf{1.　べき級数}
+
+$a$，$a_k	\:	(k=0,1,\cdots)$を与えられた定数として，
+\begin{align*}
+	f_n(x)	&\equiv	\sum_{k=0}^n	a_k	(x-a)^k	\\
+					&=			a_0	+	a_1(x-a)	+	\cdots	+	a_n	(x-a)^n	\quad\quad	(n=0,1,\cdots)
+\end{align*}
+によって定義される$n$次の多項式が，$n	\rightarrow	\infty$のとき，区間：
+$|x-a|	<	R	\:	(\leqq	\infty)$の各点$x$で，関数$f(x)$に限りなく近づくとき，
+多項式列$\{f_n(x)\}_{n=0}^\infty	$は，区間：
+$|x-a|<R$で，関数$f(x)$に\textbf{収束する}といい，
+\[
+	\lim_{n\rightarrow	\infty}f_n(x)=f(x)	\quad\quad	(|x-a|<R)
+\]
+または，
+\[
+	f_n(x)	\rightarrow	f(x)	\quad\quad	(n\rightarrow	\infty;	|x-a|<R)
+\]
+によって表す．さらに，そのとき，
+\[
+	f(x)	=	\sum_{k=0}^\infty	a_k	(x-a)^k
+				=	a_0	+	a_1(x-a)
+							+	a_2(x-a)^2
+							+	\cdots
+							+	a_k(x-a)^k
+							+	\cdots
+				\quad\quad	(|x-a|<R)
+\]
+と書いて，$f(x)$を$x$の\textbf{べき級数}という．
+
+\textbf{2．Taylor展開}
+
+$f(x)$が$|x-a|<R$で何回でも微分可能(\textbf{無限回微分可能})であるとき，
+Taylorの定理によって，任意の自然数$n$に対して，
+\begin{align}
+	f(x)=f(a)	&+	f'(a)(x-a)
+						+	\frac{f''(a)}{2!}(x-a)^2
+						+	\cdots	\notag\\
+						&+	\frac{f^{(n-1)}(a)}{(n-1)!}(x-a)^{n-1}
+						+	\frac{f^{(n)}(\xi)}{n!}(x-a)^n
+			\quad\quad	(a	\lessgtr	\xi	\lessgtr	x	;	\quad	|x-a|<R)
+\end{align}
+を満たす$\xi$が存在する．ゆえに，もし，
+\begin{align}
+	\frac{f^{(n)}(\xi)}{n!}(x-a)^n	\rightarrow	0	\quad	(n	\rightarrow	\infty;	|x-a|<R)
+	\quad\quad	(\text{\textbf{Taylor展開可能であるための条件}})
+	\label{eq18.2}
+\end{align}
+ならば，$f(x)$はべき級数に展開できる：
+\begin{align}
+	f(x)	&=f(a)	f'(a)(x-a)+	\frac{f''(a)}{2!}(x-a)^2	+	\cdots
+				+	\frac{f^{(k)(a)}}{k!}(x-a)^k	+	\cdots	\notag\\
+				&=	\sum_{k=0}^\infty	\frac{f^{(k)}(a)}{k!}(x-a)^k	\quad\quad	(|x-a|<R).
+				\quad\quad\text{\textbf{(Taylor展開の定義式)}}
+	\label{eq18.3}
+\end{align}
+(\ref{eq18.3})式を$f(x)$の\textbf{Taylor展開}または\textbf{Taylor級数}という．
+
+Taylor展開(\ref{eq18.3})で，とくに，$a=0$の場合の級数：
+\begin{align}
+	f(x)	&=f(0)	f'(0)x+	\frac{f''(0)}{2!}x^2	+	\cdots
+				+	\frac{f^{(k)(0)}}{k!}x^k	+	\cdots	\notag\\
+				&=	\sum_{k=0}^\infty	\frac{f^{(k)}(0)}{k!}x^k	\quad\quad	(|x-a|<R).
+				\quad\quad\text{\textbf{(MacLaurin展開の定義式)}}
+	\label{eq18.4}
+\end{align}
+を，\textbf{MacLaurin展開}または\textbf{MacLaurin級数}ともいう．
+
+Taylor展開(\ref{eq18.3})において，変数変換：
+$x=a+t$を行えば，MacLaurin展開に帰着するので，以下では簡単のために，
+$a=0$の場合を考える．この場合は，Taylor展開可能であるための条件(\ref{eq18.2})
+は，(\ref{eq16.10})式によって，
+\begin{align}
+	\frac{f^{(n)}(\theta	x)}{n!}x^n	&\rightarrow	0	\quad\quad	(n	\rightarrow	\infty;	|x|<R).		\label{eq18.5}
+\\
+	&\quad\quad(\text{\textbf{MacLaurin展開可能であるための条件}})	\notag
+\end{align}
+\定理{18.1}
+$f(x)$は$|x|<R	\:	(\leqq	\infty)$で無限回微分可能であって，
+\begin{equation}
+	|f^{(k)}(x)|	\leqq	M	\quad\quad	(|x|	<	R;	\;	k=1,2,	\cdots)
+	\label{eq18.6}
+\end{equation}
+をみたすような，$x$，$k$に関係しない定数$M$が存在すれば，
+$f(x)$は$|x|<R$でTaylor展開可能である：
+\begin{equation}
+	f(x)	=	\sum_{k=0}^\infty	\frac{f^{(k)}(0)}{k!}x^k	\quad\quad	(|x|<R).
+	\label{eq18.7}
+\end{equation}
+\証明
+仮定(\ref{eq18.6})によって，剰余項(\ref{eq18.5})に対して，
+\[
+	\left|
+		\frac{f^{(n)(\theta	x)}}{n!}x^n	
+	\right|
+		\leqq	M	\frac{|x|^n}{n!}	=	\text{*}	\quad	(|x|<R).
+\]
+ここで，$|x|<R$の内部に任意に固定した$x$に対して，$m	>	|x|$を満たす自然数$m$
+が存在する（Archimedesの原理）から，
+\begin{align*}
+	\text{＊}	&=	M	\cdot	\frac{|x|^{m-1}}{(m-1)!}
+									\cdot	\frac{|x|}{m}
+									\cdot	\frac{|x|}{m+1}
+									\cdots	\frac{|x|}{n}	\\
+						&\leqq	M	\cdot	\frac{|x|^{m-1}}{(m-1)!}	\cdot	\frac{|x|}{n}
+									\rightarrow	0	\quad\quad	(n	\rightarrow	\infty;	n>m).
+\end{align*}
+したがって，Taylor展開可能であるための条件(\ref{eq18.5})によって，
+定理が得られる．
+(証明終)

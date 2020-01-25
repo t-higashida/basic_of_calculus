@@ -1,0 +1,156 @@
+\section{初等関数のTaylor展開}
+
+\textbf{1.　$f(x)=e^x$.}
+
+公式(\ref{eq17.1})に加えて，さらに，任意の正数$R$に対して，
+\[
+	|f^{(n)}(x)|	=	e^x	<	e^R	\quad	(|x|<R;	\:	n=0,1,\cdots)
+\]
+が成り立つから，定理18.1によって，
+\begin{equation}
+	e^x	=	1	+	x	+	\frac{x^2}{2!}	+	\frac{x^3}{3!}	+	\cdots	\quad	(|x|<R).
+	\label{eq19.1}
+\end{equation}
+$R$は任意の正数であったから，$|x|<\infty$で，(\ref{eq19.1})式が成り立つ：
+\begin{align}
+	e^x	&=	1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots	\notag\\
+			&=	\sum_{n=0}^\infty	\frac{x^n}{n!}	\quad\quad	(|x|<\infty),
+\end{align}
+
+\textbf{2.　$f(x)=\sin	x$.}
+
+公式(\ref{eq17.3})に加えて，さらに，
+\[
+	|f^{(n)}(x)|=\left|\sin\left(x+\frac{n\pi}{2}	\right)	\right|	\leqq	1
+	\quad	(|x|<\infty;	n=1,2,\cdots)
+\]
+が成り立つから，定理18.1によって，
+\begin{align}
+	\sin	x	&=	x	-	\frac{x^3}{3!}
+								+	\frac{x^5}{5!}
+								-	\frac{x^7}{7!}
+								+	\cdots	\notag\\
+					&=	\sum_{k=0}^\infty	\frac{(-1)^k}{(2k+1)!}	x^{2k+1}
+							\quad	\quad	(|x|<\infty),
+\end{align}
+
+\textbf{3.　$f(x)=\cos	x$.}
+
+公式(\ref{eq17.4})に加えて，さらに，
+\[
+	|f^{(n)}(x)|	=	\left|	\cos	\left(	x	+	\frac{n\pi}{2}\right)
+									\right|	\leqq	1	\quad	\quad	(|x|<\infty;n=1,2,\cdots)
+\]
+が成り立つから，定理18.1によって，
+\begin{align}
+	\cos	x	&=	1	-	\frac{x^2}{2!}
+								+	\frac{x^4}{4!}
+								-	\frac{x^6}{6!}
+								+	\cdots	\\
+					&=	\sum_{k=0}^\infty	\frac{(-1)^k}{(2k)!}	x^{2k}
+						\quad\quad	(|x|<	\infty).
+\end{align}
+
+\textbf{4.　$f(x)=\log	(1+x)$.}
+
+$\log	(1+x)$に対するMacLaurinの定理(\ref{eq17.5})において，
+\begin{equation}
+	\left|
+		\frac{f^{(n)}(\theta	x)}{n!}x^n
+	\right|
+	=
+	\left|
+		\frac{(-1)^{n-1}}{n}
+			\left(
+				\frac{x}{1+\theta	x}
+			\right)^n
+	\right|
+	\leqq
+		\frac{1}{n}	\left|
+									\frac{x}{1+\theta	x}
+								\right|^n
+	\rightarrow	0
+	\quad\quad	(n	\rightarrow	\infty;0\leqq	x	\leqq	1).
+\end{equation}
+したがって，MacLaurin展開可能であるための条件(\ref{eq18.5})によって，
+\[
+	\log	(1+x)	=	x	-	\frac{x^2}{2}
+									+	\frac{x^3}{3}
+									-	\frac{x^4}{4}
+									+	\cdots	\quad\quad	(0	\leqq	x	\leqq	1).
+\]
+実は，この展開は，$-1	<	x	<	0$でも成り立つことが示されるから
+\begin{align}
+	\log	(1+x)	&=	x	-	\frac{x^2}{2}
+										+	\frac{x^3}{3}
+										-	\frac{x^4}{4}
+										+	\cdots	\notag\\
+					&=	\sum_{k=0}^\infty	(-1)^{n-1}	\frac{x^n}{n}
+						\quad\quad	(-1<	|x|	\leqq	1).
+						\label{eq19.5}
+\end{align}
+(\ref{eq19.5})式で$x$のかわりに$-x$とおけば，
+\begin{equation}
+	\log	(1-x)	=	\sum_{n=1}^\infty	(-1)^{n-1}\frac{(-x)^n}{n}
+							=	-\sum_{n=1}^\infty	\frac{x^n}{n}	\quad\quad	(-1\leqq	x	<	1).
+	\label{eq19.6}
+\end{equation}
+(\ref{eq19.5})式と(\ref{eq19.6})式の差をとれば，
+\begin{align*}
+	\log	\frac{1+x}{1-x}	
+		&=	\log	(1+x)	-	\log	(1-x)	\\
+		&=	\sum_{n=1}^\infty
+					(-1)^{n-1}	\frac{x^n}{n}	+	\sum_{n=1}^\infty	\frac{x^n}{n}	\\
+		&=	\sum_{n=1}^\infty
+					\frac{(-1)^{n-1}+1}{n}	x^n
+					\quad\quad	(-1	<	x	<	1).
+\end{align*}
+ここで，
+\[
+	(-1)^{n-1}+1	\begin{cases}
+									\:	2	\quad	(n=2k+1),	\\
+									\:	0	\quad	(n=2(k+1);	\:	k=0,1,\cdots	\\
+								\end{cases}
+\]
+に注意すれば，
+\begin{equation}
+	\log	\frac{1+x}{1-x}	=	2	\sum_{k=0}^\infty	\frac{1}{2k+1}x^{2k+1}
+	\quad\quad	(|x|<1).
+	\label{eq19.7}
+\end{equation}
+
+\textbf{5.　$f(x)=(1+x)^\alpha$	\quad	\text{($\alpha$は定数})}
+
+$(1+x)^\alpha$に対するMacLaurinの定理(\ref{eq17.6})において，
+\[
+	\left|
+		\frac{f^{(n)}(\theta	x)}{n!}x^n
+	\right|
+	=
+	\left|
+		\binom{\alpha}{n}x^n	(1+\theta	x)^{\alpha	-n}
+	\right|
+	\rightarrow	0	\quad	\quad	(n\rightarrow	\infty;	|x|<1)
+\]
+となることが示される．したがって，MacLaurin展開可能であるための条件
+(\ref{eq18.5})によって，
+\begin{align}
+	(1+x)^\alpha	&=	\binom{\alpha}{0}
+									+	\binom{\alpha}{1}x
+									+	\binom{\alpha}{2}x^2
+									+	\binom{\alpha}{3}x^3
+									+	\cdots	\notag	\\
+								&=	\sum_{n=0}^\infty	\binom{\alpha}{n}x^n
+										\quad	\quad	(|x|<1;	\text{$\alpha$は定数)}.
+	\label{eq19.8}
+\end{align}
+とくに，$\alpha$が自然数のときには，
+\begin{align*}
+	\binom{\alpha}{n}	=	0	\quad\quad	(n>\alpha	;	\text{$\alpha$は自然数})
+\end{align*}
+となるから，(\ref{eq19.8})式は2項定理の公式(\ref{eq11.6})と一致する．
+
+\例{}
+$\displaystyle	\alpha=-\frac{1}{2}$の場合，
+
+(中略)

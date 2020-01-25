@@ -1,0 +1,127 @@
+\section{ライプニッツの公式}
+
+\textbf{1. ライプニッツの公式}
+$u=f(x),v=g(x)$は，ともに，$n$回微分可能であると仮定する．積の微分の公式によって，
+\begin{equation}
+	(uv)'	=	u'v	+	uv'.	\label{eq12.1}
+\end{equation}
+積の微分の公式を利用して，さらに，この両辺を微分すれば，
+\begin{align}
+	(uv)''	&=	(u''v	+	u'v')	+	(u'v'	+	uv'')		\notag\\
+					&=	u''v	+	2u'v'	+	uv''	\label{eq12.2}
+\end{align}
+以下，同様にして，
+\begin{align}
+	(uv)'''	&=	(u'''v	+	u''v')	+	2(u''v'	+	u'v'')		+	(u'v''	+	uv''')	\notag\\
+					&=	u'''v	+	3u''v'	+	3u'v''	+	uv'''	\label{eq12.3}
+\end{align}
+\begin{align}
+	(uv)^{(4)}	&=	(u^{(4)}v	+	u'''v')	+	3(u'''v'	+	u''v'')		+	3(u''v''	+	u'v''')	
+																			+	(u'v'''	+	uv^{(4)})	\notag\\
+							&=	u^{(4)}v	+	4u'''v'	+	6u''v''	4u'v'''	+	uv^{(4)}.	\label{eq12.4}
+\end{align}
+$(uv)'$，$(uv)''$，$(uv)'''$，$(uv)^{(4)}$における係数の関係は，
+\begin{figure}[htbp]
+\begin{center}
+\setlength{\unitlength}{10mm}
+\begin{picture}(0,3)
+
+		\put(-0.5,2){$1$}
+		\put(	0.5,2){$1$}
+
+		\put(-1,1){$1$}
+		\put(0,1){$2$}
+		\put(1,1){$1$}
+
+		\put(-1.5,0){$1$}
+		\put(-0.5,0){$3$}
+		\put( 0.5,0){$3$}
+		\put( 1.5,0){$1$}
+
+		\put(-2,-1){$1$}
+		\put(-1,-1){$4$}
+		\put( 0,-1){$6$}
+		\put( 1,-1){$4$}
+		\put( 2,-1){$1$}
+
+\end{picture}
+\label{fig10.1}
+\end{center}
+\end{figure}
+\vspace*{1cm}
+であって，(\ref{eq12.1})，(\ref{eq12.2})，(\ref{eq12.3})，(\ref{eq12.4})
+の右辺の係数は，それぞれ，2項定理における
+$(u+v)^1$，$(u+v)^2$，$(u+v)^3$，$(u+v)^4$の展開係数と同じ法則によって定まる．
+微分の次数が増加しても同様である．
+
+したがって，次の定理が得られる．
+
+\定理{12.1}
+$u=f(x)$，$v=g(x)$が，そもに，$n$回微分可能ならば，
+\begin{align}
+	(uv)^{(n)}	=		\binom{n}{0}u^{(n)}v
+									+	\binom{n}{1}u^{(n-1)}v'
+									+	\binom{n}{2}u^{(n-2)}v''		
+									+	\cdots
+									+	\binom{n}{n-1}u'v^{(n-1)}
+							&		+	\binom{n}{n}uv^{(n)}	\\
+		\notag	\\
+	&\quad	\text{\textbf{(ライプニッツの公式)}}	\notag
+\end{align}
+(証明)
+$n=1$のとき
+\begin{align*}
+	(uv)'	&=	u'v	+	uv'	=	\binom{1}{0}u'v	+	\binom{1}{1}uv'	\\
+				&=	\binom{1}{0}u^{(1)}v^{(0)}	+	\binom{1}{1}u^{(0)}v^{(1)}	\\
+\end{align*}
+で成立する．$n=k$の場合に成立すると仮定すると
+\begin{multline}
+	(uv)^{(k)}	=		\binom{k}{0}u^{(k)}v^{(0)}	
+								+	\binom{k}{1}u^{(k-1)}v^{(1)}
+								+	\binom{k}{2}u^{(k-2)}v^{(2)}
+								+	\cdots		\notag	\\
+								+	\binom{k}{r-1}u^{(k-r+1)}v^{(r-1)}
+								+	\binom{k}{r}u^{(k-r)}v^{(r)}
+								+	\cdots		\notag	\\
+								+	\binom{k}{k-1}u^{(1)}v^{(k-1)}
+								+	\binom{k}{k}u^{(0)}v^{(k)}
+\end{multline}
+両辺を$x$で微分すると，
+\begin{align*}
+	\text{(左辺)}	&=	(uv)^{(k+1)}	\\
+	\text{(右辺)}	&=	\binom{k}{0}	\{u^{(k+1)}v					+	u^{(k)}v^{(1)}		\}
+									+	\binom{k}{1}	\{u^{(k)}v^{(1)}			+	u^{(k-1)}v^{(2)}	\}	
+									+	\binom{k}{2}	\{u^{(k-1)}v^{(2)}		+	u^{(k-2)}v^{(3)}	\}
+									+	\cdots	\\
+								&	+	\binom{k}{r-1}\{u^{(k-r+2)}v^{(r-1)}+	u^{(k-r+1)}v^{(r)}\}
+									+	\binom{k}{r}	\{u^{(k-r+1)}v^{(r)}	+	u^{(k-r)}v^{(r+1)}		\\
+								&	+	\binom{k}{k}	\{u^{(1)}v^{(k)}			+	uv^{(k+1)}\}	
+\end{align*}
+$\displaystyle	\binom{k}{0}	u^{(k+1)}v	=	\binom{k+1}{0}		u^{(k+1)}v$，
+$\displaystyle	\binom{k}{k}	uv^{(k+1)}	=	\binom{k+1}{k+1}	uv^{(k+1)}$であること，また，
+\begin{align*}
+	\binom{k}{r-1}	+	\binom{k}{r}
+			&	=	\frac{k!}{(r-1)!(k-r+1)!}	+	\frac{k!}{r!(k-r)!}
+				=	\frac{k!r}{(r)!(k-r+1)!}		+	\frac{k!(k-r+1)}{r!(k-r+1)!}	\\
+			&	=	\frac{k!\{r+(k-r+1)\}}{(r)!(k-r+1)!}
+				=	\frac{k!(k+1)}{(r)!(k-r+1)!}
+				=	\frac{(k+1)!}{(r)!(k-r+1)!}	\\
+			&	=	\binom{k+1}{r}	\\
+\end{align*}
+であることより，
+\[
+		\binom{k}{r-1}	u^{(k-r+1)}	v^{(r)}	+
+		\binom{k}{r}		u^{(k-r+1)}	v^{(r)}
+	=
+		\binom{k+1}{r}	u^{(k-r+1)}	v^{(r)}.
+\]
+したがって，
+\[
+	\therefore	\quad
+	(uv)^{(k+1)}	=		\binom{k+1}{0}	u^{(k+1)}v^{(0)}
+									+	\cdots
+									+	\binom{k+1}{r}	u^{(k+1)}v^{(r)}
+									+	\cdots
+									+	\binom{k+1}{k+1}	u^{(0)}v^{(k+1)}
+\]
+(証明終)

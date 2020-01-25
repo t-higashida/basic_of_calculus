@@ -1,0 +1,36 @@
+\chapter{微分法}
+
+\section{微分法の公式}
+
+\subsection{逆関数の微分の公式}
+
+\定理{4.3}
+微分可能か単調関数$x=f(y)$の逆関数$y=f^{-1}(x)$は、$f'(y)	\ne	0$であるかぎり，
+微分可能であって，
+\[
+	\{f^{-1}(x)\}'	=	\frac{1}{f'(y)};
+\]
+すなわち，
+\[
+	\frac{dy}{dx}	=	\frac{1}{\displaystyle	\frac{dx}{dy}}.	\qquad	
+	\text{(\textbf{逆関数の微分の公式})}
+\]
+\証明
+\[	\Delta	x	=	h,	\quad	\Delta	y	=	f^{-1}(x+h)-f^{-1}(x)	\]
+とおけば、定理2.3によって，$\Delta	x	=	h	\ne	0$のとき，
+$\Delta	y	\ne	0$であって，
+\[
+	\frac{\Delta	y}{\Delta	x}	
+		=	\frac{1}{\displaystyle	\frac{\Delta	x}{\Delta	y}}.
+\]
+また、定理2.3によって，$\Delta	x	=	h	\rightarrow	0$のとき，
+$\Delta	y=f^{-1}(x+h)-f^{-1}(x)	\rightarrow	0$となることに注意すれば，
+\begin{align*}
+	\{	f^{-1}(x)\}'	&	=	\lim_{\Delta	x	\rightarrow	0}	\frac{\Delta	y}{\Delta	x}										=	\frac{1}{\displaystyle	
+																\lim_{\Delta	x	\rightarrow	0}	
+																	\frac{\Delta	x}{\Delta	y}}	\\
+										&	=	\frac{1}{\lim_{\Delta	y	\rightarrow	0}
+													\frac{f(y	+	\Delta)-f(y)}{\Delta	y}}
+											=	\frac{1}{f'(y)}.
+\end{align*}
+（証明終)

@@ -1,0 +1,130 @@
+\chapter{Taylorの定理}
+
+\section{Taylorの定理}
+
+\textbf{1.　多項式のTaylor展開}
+
+一般の$n$次の多項式は，つねに，
+\begin{equation}
+	f(x)=a_0	+	a_1(x-a)	+	a_2	(x-a)^2	+	\cdots	+	a_n(x-a)^n
+	\label{eq16.1}
+\end{equation}
+の形に書くことができる．ここで，係数：
+$a_0,\cdots,a_n$と$f(x)$の$a$における各階数の微分係数との関係について調べてみよう．
+
+多項式(\ref{eq16.1})の両辺を，順次，$n$回まで微分すれば，
+\begin{align}
+	f'(x)		&=a_1		+	2a_2(x-a)	+	3a_3(x-a)^2	+	\cdots	+	na_n(x-a)^{n-1},	\label{eq16.2}\\
+	f''(x)	&=2!a_2	+	3\cdot	2a_3(x-a)^	+	\cdots	+	n(n-1)a_n(x-a)^{n-2},	\label{eq16.3}\\
+	f'''(x)	&=3!a_2	+	3\cdot	+	\cdots	+	n(n-1)(n-2)a_n(x-a)^{n-3},				\label{eq16.4}\\
+	\cdots\cdots	\notag	\\
+	f^{(n)}(x)	&=n!a_n.	\label{eq16.5}
+\end{align}
+(\ref{eq16.1})式～(\ref{eq16.5})式の各式の両辺で，$x=a$とおけば，
+\begin{align*}
+	f(a)=a_0,			\quad	
+	f'(a)=a_1,		\quad
+	f''(a)=2!a_2,	\quad
+	f'''(a)=3!a_3,	\\
+	\cdots,	\quad	f^{(n)}(a)	=	n!a_n.
+\end{align*}
+すなわち，
+\[
+	a_k	(x-a)^k	=	\frac{f^{(k)}}{k!}(x-a)^k.	\quad	(k=0,1,2,\cdots,n)
+\]
+したがって，$n$次の多項式$f(x)$のつぎの表示が得られる：
+\[
+	f(x)=f(a)+f'(a)(x-a)	+	\frac{f''(a)}{2!}(x-a)^2
+												+	\cdots
+												+	\frac{f^{(n)}}{n!}(x-a)^n.
+\]
+この表示の仕方を，一般の関数$f(x)$にまで広めたものが，これから述べる
+Taylorの定理ないしはTaylor展開である．
+
+\定理{16.1}
+$f(x)$は，$[a,b]$で$(n-1)$階導関数が連続で，$(a,b)$で$n$回
+微分可能ならば，
+\begin{align}
+	f(b)=f(a)	+	f'(a)(b-a)	+	\frac{f''(a)}{2!}(b-a)^2	
+													&+	\cdots	\notag	\\	
+													+	\frac{f^{(n-1)}(a)}{(n-1)!}(b-a)^{n-1}
+													+	\frac{f^{(n)}(c)}{n!}(b-a)^n
+	\quad\quad	(a	<	c	<	b)
+	\label{eq16.6}
+\end{align}
+をみたす$c$が存在する．\textbf{(Taylorの定理)}
+
+\証明
+
+\[
+	f(b)	=	f(a)	+	f'(a)(b-a)	
+								+	\frac{f''(a)}{2!}(b-a)^2
+								+	\cdots
+								+	\frac{f^{(n-1)}}{(n-1)!}(b-a)^{n-1}
+								+	\frac{\mu}{n!}(b-a)^n
+\]
+をみたす$\mu$が，
+\[
+	\mu=f^{(n)}(c)	\quad	(a	<	c	<	b)
+\]
+と書けることを示せばよい．
+\[
+	F(x)=f(b)-\left\{	f(x)	+	f'(x)(b-x)
+													+	\frac{f''(x)}{2!}(b-a)^2
+													+	\cdots
+													+	\frac{f^{(n-1)}}{(n-1)!}(b-x)^{n-1}
+													+	\frac{\mu}{n!}(b-x)^n
+						\right\}
+\]
+とおけば，$\mu$の満たすべき条件より$F(a)=0$，また$F(b)=0$も成り立つ．
+したがって，$F(x)$はRolleの定理の仮定をみたしており．そのとき，
+\begin{equation}
+	F'(c)=0	\quad	(a<c<b)
+	\label{eq16.7}
+\end{equation}
+をみたす$c$が存在する．
+\begin{align*}
+	F'(x)	=	&-	\bigg[						f'(x)
+									+	\left\{		-f'(x)									+	f''(x)(b-x)	\right\}
+									+	\left\{		-\frac{f''(x)}{1!}(b-x)	+	\frac{f'''(x)}{2!}(b-x)^2	\right\}	\\
+					&+	\cdots	\\
+					&				+	\left\{		-\frac{f^{(n-2)}(x)}{(n-3)!}(b-x)^{n-3}	+	\frac{f^{(n-1)}(x)}{(n-2)!}(b-x)^{n-2}	\right\}
+								+	\left\{		-\frac{f^{(n-1)}(x)}{(n-2)!}(b-x)^{n-2}	+	\frac{f^{(n)}(x)}{(n-1)!}(b-x)^{n-1}	\right\}	\\
+					&			+	\left\{		-\frac{\mu}{(n-1)!}(b-x)^{n-1}	\right\}	
+						\bigg]	\\
+				=	&	\frac{f^{(n)}(x)}{(n-1)!}(b-x)^{n-1}	-	\frac{\mu}{(n-1)!}(b-x)^{n-1}
+\end{align*}
+であるから，(\ref{eq16.7})式によって，
+\begin{equation}
+	\mu	=	f^{(n)}(c)	\quad	(a	<	c	<	b).
+	\label{eq16.8}
+\end{equation}
+(証明終)
+
+$b<a$と仮定しても，証明はまったく同様であるから，Taylorの定理は，
+$b<a$の場合にも成り立つことがわかる．
+
+定理16.1において，平均値の定理の場合と同様に，
+\[
+	b=a+h,	\quad	\frac{c-a}{b-a}=\theta
+\]
+とおけば，$0<\theta<1$であって，(\ref{eq16.6})式は，
+\begin{equation}
+	f(a+h)=	f(a)	+	f'(a)h
+								+	\frac{f''(a)}{2!}h^2
+								+	\cdots
+								+	\frac{f^{(n-1)}(a)}{(n-1)!}h^{n-1}
+								+	\frac{f^{(n)}(a+\theta	h)}{n!}h^n
+	\quad	(0	<	\theta	<	1)
+	\label{eq16.9}
+\end{equation}
+と書ける．
+
+さらに，(\ref{eq16.9})式において，$a=0$，$h=x$とおけば，
+\begin{align}
+	f(x)	&=	f(0)	+	f'(0)x	+	\frac{f''(0)}{2!}x^2	+	\cdots	+	\frac{f^{(n-1)}(0)}{(n-1)!}x^{n-1}		\notag	\\
+				&+	\frac{f^{(n)}(\theta	x)}{n!}x^n		\quad\quad	(0	<	\theta	<	1)
+	\label{eq16.10}
+\end{align}
+と書ける．(\ref{eq16.10})式の形の公式は，\textbf{Maclaurinの定理}とも呼ばれる．
+

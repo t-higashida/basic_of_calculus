@@ -1,0 +1,208 @@
+\chapter{初等関数の微分}
+
+\section{三角関数の微分}
+
+\textbf{1．弧度法}
+
+角を表すのに，直角の$\displaystyle	\frac{1}{90}$を$1^\circ$（1度)とする
+\textbf{60分法}のほかに，1つの円を描いて，半径に等しい長さの弧に対する中心角を，
+単位の角と$1$とする角の表し方がある(図6.1)．この中心角は，円の半径$r$に関係しない
+一定の角である．この角を1\textbf{ラジアン}，または$1$\textbf{弧度}といい，
+これを単位とする角の表し方を，\textbf{弧度法}という．微分積分学では，
+もっぱら，弧度法が用いられる．
+
+60分法で$\theta$度である角が，弧度法の$\alpha$ラジアンに（円周の長さを
+半径の長さで割ったもの）に対応していることから，
+\[
+	\frac{\theta}{\alpha}	=	\frac{360}{2	\pi}.
+\]
+\begin{figure}[htbp]
+\begin{center}
+\setlength{\unitlength}{10mm}
+\begin{picture}(0,2)
+	\thicklines\put(0,0){\circle{5}}
+	\thinlines\path(0,0)(2.5,0)
+	\thinlines\path(0,0)(1.136,2.2)
+	\put(1,-0.3){$r$}
+	\put(2.25,1.4){$r$}
+	\arc{1}{-1.1}{0}
+	\put(0.5,0.3){$1$}
+	
+\end{picture}
+\end{center}
+\vspace*{2cm}
+\caption{}
+\end{figure}
+
+\begin{align*}
+	\therefore	\alpha	=	\frac{\pi}{180}	\theta.
+		\quad	\text{\textbf{(60分法と弧度法の関係)}}
+\end{align*}
+
+\begin{table}[thbp]
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}																																																																																																						\hline
+		$\theta$	&$0^\circ$	&	$30^\circ$	&$40^\circ$	&	$60^\circ$	&	$90^\circ$	&	$180^\circ$	&	$270^\circ$	&$360^\circ$	\\	\hline
+		$\alpha$	&$0$				&	$\pi/6$			&$\pi/4$		&	$\pi/3$			&	$\pi/2$			&	$\pi$				&	$3\pi/2$		&$2\pi$				\\	\hline
+	\end{tabular}
+\end{center}
+\caption[増減表]{60分法と弧度法の関係}\label{tab1.1}
+\end{table}
+角を弧度法によって表すときは，単位名のラジアンは，普通，省略する．
+
+（保留）
+
+\begin{align}
+	\sin	A	+	\sin	B	&=	2		\sin	\frac{A+B}{2}	\cos	\frac{A-B}{2}.	\label{eq6.15}	\\
+	\sin	A	-	\sin	B	&=	2		\cos	\frac{A+B}{2}	\sin	\frac{A-B}{2}.	\label{eq6.16}	\\
+	\cos	A	+	\cos	B	&=	2		\sin	\frac{A+B}{2}	\sin	\frac{A-B}{2}.	\label{eq6.17}	\\
+	\cos	A	-	\cos	B	&=-2	\sin	\frac{A+B}{2}	\sin	\frac{A-B}{2}.		\label{eq6.18}
+\end{align}
+
+\textbf{4．不定形の極限値}
+
+三角関数の微分の公式を導くために，つぎの不定形の極限値の公式を証明しておく：
+\begin{equation}
+	\lim_{x\rightarrow	0}	\frac{\sin	x}{x}	=	1.
+	\label{eq6.20}
+\end{equation}
+\証明
+	まず，
+\begin{equation}
+	\lim_{x	\rightarrow	+0}	\frac{\sin	x}{x}=1
+	\label{eq6.21}
+\end{equation}
+を証明する．$\displaystyle	0	<	x	<	\frac{\pi}{2}$と仮定してよい．
+そのとき，図6.4において面積を比較することによって，
+\begin{figure}[htbp]
+\begin{center}
+\setlength{\unitlength}{25mm}
+\begin{picture}(3,1.5)
+
+	\put(-0.15,-0.15){$O$}
+	\put(2.55,-0.15){$A$}
+	\put(2.1,1.25){$B$}
+	\put(2.46,1.4){$C$}
+	\put(2.7,0.6){$\tan	x$}
+	\put(1.75,0.57){$\sin	x$}
+	\put(0.9,0.85){$1$}
+	\put(1.25,-0.4){$1$}
+
+	\thicklines
+	\arc{5.1}{-0.49}{0}
+
+	\thinlines
+	\arc{0.75}{-0.5}{0}
+
+	\thicklines
+	\put(0.4,0.06){$x$}
+	\path(0,0)(2.5,0)
+	\path(0,0)(2.193956405,1.198563847)
+	\path(2.193956405,0)(2.193956405,1.198563847)
+	\qbezier[40](2.193956405,0)(1.9,0.5992819235)(2.193956405,1.198563847)
+
+	\path(0,0)(2.5,1.365756225)
+	\path(2.5,0)(2.5,1.365756225)
+	\path(2.5,0)(2.193956405,1.198563847)
+	\qbezier[50](2.5,0)(2.75,0.682878113)(2.5,1.365756225)
+	\qbezier[60](0,0)(1.25,-0.5)(2.5,0)
+	\qbezier[60](0,0)(1.0,1.1)(2.193956405,1.198563847)
+	
+\end{picture}
+\end{center}
+\vspace*{1cm}
+\caption{}
+\end{figure}
+\[
+	\triangle	OAB	<	\text{扇形}OAB	<	\triangle	OAC.
+\]
+\[
+	\therefore	\quad	\frac{1}{2}	\cdot	1	\cdot	\sin	x	<	\frac{x}{2\pi}	\cdot	\pi	<	\frac{1}{2}	\cdot	1	\cdot	\tan	x.
+\]
+\[
+	\therefore	\quad	\sin	x	<	x	<	\frac{\sin	x}{\cos	x}.
+\]
+\[
+	\therefore	\quad	\cos	x	<	\frac{\sin	x}{x}	<	1.
+\]
+ここで，$x$を$0$に限りなく近づければ，
+\[
+	1=\lim_{x	\rightarrow	+	0}	\cos	x	\leqq	\lim_{x	\rightarrow	+0}	\frac{\sin	x}{x}	\leqq	1.
+\]
+したがって，(\ref{eq6.21})式が得られる．
+
+つぎに，$x=-t$とおけば，$x	<	0$のとき$	t	>	0$であって，$\sin	(-t)	=	-	\sin	t$であることに
+注意すれば，(\ref{eq6.21})式によって，
+\begin{equation}
+	\lim_{x\rightarrow	-0}\frac{\sin	x}{x}	=	\lim_{t	\rightarrow	+0}	\frac{\sin	(-t)}{-t}
+																					=	\lim_{t	\rightarrow	+0}	\frac{-\sin	t}{-t}=1.
+	\label{eq6.22}
+\end{equation}
+(\ref{eq6.21})式と(\ref{eq6.22})式によって，(\ref{eq6.20})式が得られる．
+
+(証明終)
+
+（中保留）
+
+\textbf{5.　三角関数の微分}
+\begin{equation}
+	(	\sin	x)	'	=	\cos	x
+	\label{eq6.23}
+\end{equation}
+\証明
+	三角関数の差を積になおす公式(\ref{eq6.16})によって，
+\begin{align*}
+	(\sin	x)'	&=	\lim_{h	\rightarrow	0}	\frac{\sin	(x	+	h)	-	\sin	x}{h}	\\
+						&=	\lim_{h	\rightarrow	0}	\frac{\displaystyle	2	\cos	\left(	x	+	\frac{h}{2}	\right)	\sin	\frac{h}{2}	}{h}
+							\quad\quad	(	\because	\text{公式	(\ref{eq6.16})})	\\
+						&=	\lim_{h	\rightarrow	0}	\cos	\left(x	+	\frac{h}{2}	\right)
+								\lim_{h	\rightarrow	0}	\frac{\displaystyle	\sin	\frac{h}{2}}{\displaystyle	\frac{h}{2}}
+							=	\text{＊}
+\end{align*}
+ここで，公式(\ref{eq6.20})を用いれば，
+\[
+	\text{＊}	=	\cos	x.
+\]
+(証明終)
+
+\begin{equation}
+	(\cos	x)'	=	-	\sin	x.	\label{eq6.24}
+\end{equation}
+\証明
+
+三角関数の差を積になおす公式(\ref{eq6.18})によって，
+\begin{align*}
+	(\cos	x)'	&=	\lim_{h	\rightarrow	0}	\frac{\cos	(x+h)	-	\cos	x}{h}	\\
+						&=	\lim_{h	\rightarrow	0}	\frac{\displaystyle	-2	\sin	\left(x	+	\frac{h}{2}\right)	\sin	\frac{h}{2}}{h}
+								\quad\quad	(	\because	\text{公式(\ref{eq6.18})})	\\
+						&=	\lim_{h\rightarrow	0}	\left\{	-	\sin	\left(	x	+	\frac{h}{2}	\right)	\right\}
+								\lim_{h\rightarrow	0}	\frac{\displaystyle	\sin	\frac{h}{2}}{\displaystyle	\frac{h}{2}}	=\text{＊}
+\end{align*}
+ここで，公式(\ref{eq6.20})を用いれば，
+\[
+	\text{＊}	=	-	\sin	x.
+\]
+(証明終)
+
+\begin{equation}
+	(\tan	x)'	=	\sec^2	x	\quad	(=	1	+	\tan	^2	x).	\label{eq6.25}
+\end{equation}
+\証明
+
+商の微分の公式と(\ref{eq6.23})，(\ref{eq6.24})式を利用すれば，
+\begin{align*}
+	(\tan	x)'	&=	\left(\frac{\sin	x}{\cos	x}	\right)'
+							=	\frac{(\sin	x)'\cos	x	-	\sin	x	(\cos	x)'}{\cos^2	x}	\\
+						&=	\frac{\cos	x	\cos	x	-	\sin	x	(-\sin	x)}{\cos^2	x}	\\
+						&=	\frac{1}{\cos^2	x}	=	\sec^2	x.
+\end{align*}
+証明終
+
+\begin{equation}
+	(\cot	x)'	=	-	\text{cosec}^2	x.	\label{eq6.26}
+\end{equation}
+\証明
+
+$\displaystyle	\cot	x	=	\frac{\cos	x}{\sin	x}$に注意すれば，(\ref{eq6.25})式の証明と同様である．
+
+証明終

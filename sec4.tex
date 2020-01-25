@@ -1,0 +1,136 @@
+\section{微分法の公式}
+
+\subsection{和・差・積・商の微分の公式}
+
+\定理{4.1}
+$u=f(x)$，$v=g(x)$が微分可能ならば，次の公式が成り立つ：
+\begin{list}{}{}
+	\item	(ⅰ)　$(cu)'=c(u')	\quad	(\text{$c$は定数});	\quad$	\textbf{(定数培の微分の公式)}
+	\item	(ⅱ)　$(u	\pm	v)'	=	u'	\pm	v'	\quad	(\text{複合同順});	\quad$	\textbf{(和・差の微分の公式)}
+	\item	(ⅲ)　$(uv)'=u'v	+	uv';	\quad$	\textbf{(積の微分の公式)}
+	\item	(ⅳ)　$\displaystyle	\left(\frac{1}{v}\right)'=-\frac{v'}{v^2}	\quad	(v\ne	0);	\quad$\textbf{(逆数関数の微分の公式)}
+	\item	(ⅴ)　$\displaystyle	\left(\frac{u}{v}\right)'=\frac{u'v-uv'}{v^2}	\quad	(v\ne	0);	\quad$\textbf{(商の微分の公式)}
+\end{list}
+\証明
+(ⅰ),(ⅱ)は簡単である．
+
+(ⅲ)
+\begin{align*}
+	(uv)'	&=\lim_{h	\rightarrow	0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h}	\\
+				&=\lim_{h	\rightarrow	0}\frac{\{f(x+h)-f(x)\}g(x+h)-f(x)\{g(x+h)-g(x)\}}{h}	\\
+\end{align*}
+
+（以下保留）
+
+\subsection{合成関数の微分の公式}
+
+\定理{4.2}
+$u=f(x)$が或る区間で微分可能で，$y=g(u)$が$f(x)$の\textbf{値域}(関数値の集合)
+を含む範囲で微分可ならば，合成関数$y=g(f(x))$は，
+もとの区間で微分可能であって，
+\[
+	\frac{dg(f(x))}{dx}=g'(f(x)f'(x);
+\]
+すなわち，
+\[
+	\frac{dy}{dx}=\frac{dy}{du}\cdot	\frac{du}{dx}.	\quad	\text{(\textbf{合成関数の微分の公式})}
+\]
+\証明
+$x$の増分$\Delta	x=h$に対する$u$，$y$の増分を$\Delta	u$，$\Delta	y$とする：
+\begin{align*}
+	\Delta	x	&	=	h,	\quad	\Delta	u	=	f(x+h)	-	f(x),	\\
+	\Delta	y	&	=	g(f(x+h))	-	g(f(x))	\\
+						&	=	g(u+\Delta	u)	-	g(u)	\qquad	(u=f(x)).
+\end{align*}
+そのとき，
+$
+	\displaystyle	\{g(f(x))\}'	=	\lim_{\Delta x\rightarrow	0}	\frac{\Delta	y}{\Delta	x}
+															=	\lim_{\Delta x\rightarrow	0}	\frac{\Delta	y}{\Delta	u}	\cdot	\frac{\Delta	u}{\Delta	x}
+															=	\text{＊}.
+$
+ここで，定理3.1によって，$\Delta	x	=	h	\rightarrow	0$のとき，
+$\Delta	u	=	f(x+h)	-	f(x)	\rightarrow	0$となることに注意すれば，
+\begin{align*}
+	\text{＊}	&=	\lim_{\Delta	u	\rightarrow	0}	\frac{\Delta	y}{	\Delta	u}
+								\cdot
+								\lim_{\Delta	x	\rightarrow	0}	\frac{\Delta	u}{	\Delta	x}	\\
+						&=	\lim_{\Delta	u	\rightarrow	0}	\frac{g(u+\Delta	u)	-	g(u)}{\Delta	u}
+								\cdot
+								\lim_{\Delta	x	\rightarrow	0}	\frac{f(x+\Delta	x)	-	f(x)}{\Delta	x}	\\
+						&=	g'(u)f'(x)			\\
+						&=	g'(f(x))f'(x).	\\
+\end{align*}
+
+\textbf{4.関数のパラメター表示}
+
+$x$の関数$y$を，\textbf{パラメター}$t$を媒介にして表示したもの：
+\[
+	x=\varphi	(t),	\quad	y=\psi	(t)
+\]
+を\textbf{関数のパラメター表示}という．
+
+\定理{4.4}	$x=\varphi(t)	,	y=\psi	(t)$が微分可能であって，$\varphi'(t)	\ne	0$であるとき，
+\[
+	\frac{dy}{dx}	=	\frac{\displaystyle	\frac{dy}{dt}}{\displaystyle	\frac{dx}{dt}}
+								=	\frac{\psi'(t)}{\varphi'(t)}.
+								\quad\quad
+								\text{(\textbf{パラメター表示された関数の微分の公式)}}
+\]
+\証明
+$\Delta	x	=	\varphi(t	+	\Delta	t)	-	\varphi(t)$，$\Delta	y	=	\psi	(t	+	\Delta	t)	-	\psi	(t)$
+とおく．定理3.1によって，
+\[
+	\Delta	x	=	\varphi	(	t	+	\Delta	t)	-	\varphi	(t)	\rightarrow	0	\quad\quad	(\Delta	t	\rightarrow	0)
+\]
+であることに注意すれば，
+\begin{align*}
+	\frac{\psi'(t)}{\varphi'(t)}	&=	\frac{\displaystyle
+																					\lim_{\Delta	t	\rightarrow	0}
+																						\frac{\Delta	y}{\Delta	t}}{
+																				\displaystyle	
+																					\lim_{\Delta	t	\rightarrow	0}
+																						\frac{\Delta	x}{\Delta	t}}
+																	=	\lim_{\Delta	t	\rightarrow	0}	
+																					\frac{\displaystyle
+																						\frac{\Delta	y}{\Delta	t}}{
+																				\displaystyle
+																						\frac{\Delta	x}{\Delta	t}}
+																=	\lim_{\Delta	\rightarrow	0}\frac{\Delta	y}{\Delta	x}
+																=	\frac{dy}{dx}.
+\end{align*}
+(証明終)
+
+\subsection{逆関数の微分の公式}
+
+\定理{4.3}
+微分可能な単調関数$x=f(y)$の逆関数$y=f^{-1}(x)$は、$f'(y)	\ne	0$であるかぎり，
+微分可能であって，
+\[
+	\{f^{-1}(x)\}'	=	\frac{1}{f'(y)};
+\]
+すなわち，
+\[
+	\frac{dy}{dx}	=	\frac{1}{\displaystyle	\frac{dx}{dy}}.	\qquad	
+	\text{(\textbf{逆関数の微分の公式})}
+\]
+\証明
+\[	\Delta	x	=	h,	\quad	\Delta	y	=	f^{-1}(x+h)-f^{-1}(x)	\]
+とおけば、$x=f(y)$より$y+\Delta	y	=	f^{-1}(x+h)$，すなわち
+$\Delta	x	=	h	=	f(y	+	\Delta	y)	-	f(y)$．
+定理2.3によって，$\Delta	x	=	h	\ne	0$のとき，
+$\Delta	y	\ne	0$であって，
+\[
+	\frac{\Delta	y}{\Delta	x}
+		=	\frac{1}{\displaystyle	\frac{\Delta	x}{\Delta	y}}.
+\]
+また、定理2.3によって，$\Delta	x	=	h	\rightarrow	0$のとき，
+$\Delta	y=f^{-1}(x+h)-f^{-1}(x)	\rightarrow	0$となることに注意すれば，
+\begin{align*}
+	\{	f^{-1}(x)\}'	&	=	\lim_{\Delta	x	\rightarrow	0}	\frac{\Delta	y}{\Delta	x}										=	\frac{1}{\displaystyle	
+																\lim_{\Delta	x	\rightarrow	0}	
+																	\frac{\Delta	x}{\Delta	y}}	\\
+										&	=	\frac{1}{\displaystyle	\lim_{\Delta	y	\rightarrow	0}
+													\frac{f(y	+	\Delta	y)-f(y)}{\Delta	y}}
+											=	\frac{1}{f'(y)}.
+\end{align*}
+（証明終)
